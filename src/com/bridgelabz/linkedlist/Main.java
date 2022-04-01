@@ -15,13 +15,12 @@ public class Main {
         System.out.println("List after insertion");
         linkedList.insertToMiddle(30);
         linkedList.display();
-        
-        System.out.println("Delete first element");
-        linkedList.pop();
-        linkedList.display();
 
-        System.out.println("Delete last element");
-        linkedList.popLast();
-        linkedList.display();
+        if(linkedList.searchNode(30)){
+            System.out.println("The node 30 is present");
+            linkedList.display();
+        }else {
+            System.out.println("Node not found");
+        }
     }
 }

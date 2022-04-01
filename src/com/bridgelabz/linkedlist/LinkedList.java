@@ -60,6 +60,14 @@ public class LinkedList {
         }
     }
 
+    // delete first element
+    public void pop() {
+        if(head == null) {
+            System.out.print("empty");
+        }
+        head = head.next;
+    }
+
     // display node
     public void display() {
         Node  temp = head;

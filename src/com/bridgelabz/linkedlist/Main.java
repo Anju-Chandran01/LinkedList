@@ -17,7 +17,9 @@ public class Main {
         linkedList.display();
 
         if(linkedList.searchNode(30)){
-            System.out.println("The node 30 is present");
+            System.out.println("The node 30 is present, insert 40 now ");
+            System.out.println();
+            linkedList.insertAtPosition(40, 3);
             linkedList.display();
         }else {
             System.out.println("Node not found");

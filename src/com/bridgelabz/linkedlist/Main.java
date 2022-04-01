@@ -24,5 +24,10 @@ public class Main {
         }else {
             System.out.println("Node not found");
         }
+
+        System.out.println();
+        linkedList.removeElements(40);
+        linkedList.display();
+        System.out.println(linkedList.getSize());
     }
 }

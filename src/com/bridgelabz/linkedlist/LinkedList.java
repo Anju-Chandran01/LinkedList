@@ -110,6 +110,8 @@ public class LinkedList {
         }
     }
 
+    // Delete node from linked list
+
     // Display node
     public void display() {
         Node  temp = head;

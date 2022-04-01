@@ -5,9 +5,9 @@ public class Main {
 
         System.out.println("--- Welcome to Linked List programs ---");
         LinkedList linkedList = new LinkedList();
-        linkedList.add(56);
-        linkedList.add(30);
-        linkedList.add(70);
+        linkedList.append(56);
+        linkedList.append(30);
+        linkedList.append(70);
 
         linkedList.display();
     }

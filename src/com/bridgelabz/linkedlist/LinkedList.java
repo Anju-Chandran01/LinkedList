@@ -5,7 +5,7 @@ public class LinkedList {
     Node head = null;
     Node tail = null;
 
-    public class Node {
+    public static class Node {
         int data;
         Node next;
 
@@ -21,7 +21,19 @@ public class LinkedList {
         if(head == null) {
             head = newNode;
             tail = newNode;
-            return;
+        }
+        else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+    }
+
+    // append nodes
+    public void append(int data) {
+        Node newNode = new Node(data);
+        if(head == null) {
+            head = newNode;
+            tail = newNode;
         }
         else {
             tail.next = newNode;

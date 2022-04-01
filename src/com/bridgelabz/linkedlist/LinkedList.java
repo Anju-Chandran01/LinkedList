@@ -41,11 +41,30 @@ public class LinkedList {
         }
     }
 
+    // Insert to middle of the linked list
+
+    public void insertToMiddle(int data) {
+        Node newNode = new Node(data);
+        if(head == null) {
+        }
+        else {
+            Node temp = head;
+            Node middle = head;
+            while (temp.next != null && temp.next.next != null)
+            {
+                temp = temp.next.next;
+                middle = middle.next;
+            }
+            newNode.next = middle.next;
+            middle.next = newNode;
+        }
+    }
+
     // display node
     public void display() {
         Node  temp = head;
         while(temp != null) {
-            System.out.print(temp.data +" ");
+            System.out.println(temp.data +" ");
             temp = temp.next;
         }
     }

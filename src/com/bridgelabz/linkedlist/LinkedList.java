@@ -5,16 +5,6 @@ public class LinkedList {
     Node head = null;
     Node tail = null;
 
-    public static class Node {
-        int data;
-        Node next;
-
-        public Node(int data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
-
     // add node
     public void add( int data) {
         Node newNode = new Node(data);
@@ -66,6 +56,19 @@ public class LinkedList {
             System.out.print("empty");
         }
         head = head.next;
+    }
+
+    //delete last element
+    public Node popLast() {
+        if(head == null || head.next == null) {
+            return null;
+        }
+        Node temp = head;
+        while(temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        return head;
     }
 
     // display node

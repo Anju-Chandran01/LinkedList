@@ -19,5 +19,9 @@ public class Main {
         System.out.println("Delete first element");
         linkedList.pop();
         linkedList.display();
+
+        System.out.println("Delete last element");
+        linkedList.popLast();
+        linkedList.display();
     }
 }

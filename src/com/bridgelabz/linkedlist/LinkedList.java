@@ -2,8 +2,9 @@ package com.bridgelabz.linkedlist;
 
 public class LinkedList {
 
-    Node head = null;
+    static Node head = null;
     Node tail = null;
+    static int size;
 
     // add node
     public void add( int data) {
@@ -110,7 +111,53 @@ public class LinkedList {
         }
     }
 
-    // Delete node from linked list
+    public void removeElements(int key) {
+        Node current = head;
+        Node temp = null;
+
+        if(current != null  && current.data == key) {
+            head = current.next;
+            return;
+        }
+
+        while(current != null  && current.data != key) {
+            temp = current;
+            current = current.next;
+        }
+        if(current == null) {
+            return;
+        }
+        temp.next = current.next;
+    }
+
+    // sort
+    public void sortList() {
+        Node current = head;
+        Node index = null;
+        int temp;
+
+        if(head == null) {
+        }
+        else {
+            while(current != null) {
+                index = current.next;
+                while(index != null) {
+                    if(current.data > index.data) {
+                        temp = current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        }
+    }
+
+    // display size
+    public int getSize() {
+        return size;
+    }
 
     // Display node
     public void display() {

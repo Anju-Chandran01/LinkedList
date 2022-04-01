@@ -16,18 +16,21 @@ public class Main {
         linkedList.insertToMiddle(30);
         linkedList.display();
 
+        System.out.println("Sort the linked list.");
+        linkedList.sortList();
+        linkedList.display();
+
         if(linkedList.searchNode(30)){
             System.out.println("The node 30 is present, insert 40 now ");
-            System.out.println();
             linkedList.insertAtPosition(40, 3);
             linkedList.display();
         }else {
             System.out.println("Node not found");
         }
 
-        System.out.println();
+        System.out.println("Delete 40");
         linkedList.removeElements(40);
         linkedList.display();
-        System.out.println(linkedList.getSize());
+        System.out.println(linkedList.getSize() + " is the size");
     }
 }
